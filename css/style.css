@@ -22,7 +22,7 @@ a {
 
 .right-image {
   height: auto;
-  width: 450px;
+  width: auto;
   float: right;
   margin-right: 150px;
 }
