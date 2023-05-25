@@ -23,14 +23,14 @@ function calculatePressed() {
     } else if (dayOfTheWeek == "Saturday" || dayOfTheWeek == "Sunday") {
       // this entire if statement is for calculating weekend prices based on age
       if (age <= 17) {
-        price = 10 // weekend child pricing (%20 more than 8)
+        price = 10 // weekend child pricing (20% more than 8)
       } else {
-        price = 22 // weekend adult pricing (%20 more than 18)
+        price = 22 // weekend adult pricing (20% more than 18)
       }
       document.getElementById("answertext").innerHTML =
-        "You get weekend prices, which are %20 more than standard prices." // this runs no matter if the price is adult or child
+        "You pay weekend prices, which are 20% more than standard prices." // this runs no matter if the price is adult or child
     } else {
-      // this entire if statement is for calculating standar prices based on age
+      // this entire if statement is for calculating standard prices based on age
       if (age <= 17) {
         price = 8 // child pricing (from 10 to 17)
       } else {
@@ -40,12 +40,14 @@ function calculatePressed() {
         "You pay standard prices."
     }
   } else {
-    document.getElementById("answertext").innerHTML = "That age is invalid."
-    document.getElementById("answerprice").innerHTML = ""
+    document.getElementById("answertext").innerHTML = "That input is invalid."
+    document.getElementById("answerprice").innerHTML =
+      "Please enter a possible age or day of the week."
   }
 
   // Output
   if (age >= 0) {
-    document.getElementById("answerprice").innerHTML = "You pay: $" + price + "."
+    document.getElementById("answerprice").innerHTML =
+      "You pay: $" + price + "."
   }
 }
